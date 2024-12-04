@@ -62,17 +62,17 @@ export default function BiodataForm() {
       extra: e.target[18].value,
     };
 
-    // try {
-    //   const usersRef = ref(database, "AllBiodata");
-    //   const newDataRef = await push(usersRef);
+     try {
+       const usersRef = ref(database, "AllBiodata");
+       const newDataRef = await push(usersRef);
 
-    //   set(newDataRef, FormDataObject);
+       set(newDataRef, FormDataObject);
     console.log(FormDataObject);
     e.preventDefault();
     setSubmitted(true);
-    // } catch (error) {
-    //   alert("Your Data is not submitted!!");
-    // }
+     } catch (error) {
+       alert("Your Data is not submitted!!");
+     }
   };
 
   return (
